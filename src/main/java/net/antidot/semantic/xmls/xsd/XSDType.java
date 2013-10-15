@@ -77,13 +77,32 @@ public enum XSDType {
 	/**
 	 */
 	GYEAR("gYear"), // YYYY (1900 - 2155).
+        /**
+	 */
+	GDAY("gDay"), // DD (01 - 31).
+        /**
+	 */
+	GMONTH("gMonth"), // MM (01 - 12).
+        /**
+	 */
+	GYEARMONTH("gYearMonth"), // See 3.2.10 XML Schema datatypes
+        /**
+	 */
+	GMONTHDAY("gMonthDay"), // See 3.2.12 XML Schema datatypes
 	/**
 	 */
 	ENUMERATION("enumeration"), // See 4.3.5.2 XML Representation of enumeration Schema Components
+        /**
+	 */
+	DURATION("duration"), // See 3.2.6 XML Schema datatypes
 	/**
 	 */
 	POSITIVE_INTEGER("positiveInteger"), // Based on xsd:nonNegativeInteger
 	HEXBINARY("hexBinary"),
+        BASE64BINARY("base64Binary"),
+        ANYURI("anyURI"),
+        QNAME("QName"),
+        NOTATION("NOTATION"),
 	BOOLEAN("boolean");
 	
 	public static String XSD_NAMESPACE = "http://www.w3.org/2001/XMLSchema#";
