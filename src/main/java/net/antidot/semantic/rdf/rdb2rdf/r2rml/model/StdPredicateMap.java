@@ -22,6 +22,8 @@
  * A predicate map is a specific term map used for 
  * representing RDF predicate. 
  * 
+ * modified by mielvandersande
+ * 
  ****************************************************************************/
 package net.antidot.semantic.rdf.rdb2rdf.r2rml.model;
 
@@ -90,9 +92,10 @@ public class StdPredicateMap extends AbstractTermMap implements TermMap,
 		 */
 		if (predicateObjectMap != null) {
 			// Update predicateObjectMap if not contains this object map
-			if (predicateObjectMap.getPredicateMaps() == null)
-				predicateObjectMap
-						.setPredicateMaps(new HashSet<PredicateMap>());
+			if (predicateObjectMap.getPredicateMaps() == null) {
+                        predicateObjectMap
+                                        .setPredicateMaps(new HashSet<PredicateMap>());
+                    }
 			predicateObjectMap.getPredicateMaps().add(this);
 		}
 		// }
